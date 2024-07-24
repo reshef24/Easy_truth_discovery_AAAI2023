@@ -23,12 +23,12 @@ PARAMS:
 
 # see IPTD() for explanation of arguments
 def Top2(data:pd.DataFrame, 
-           gt, 
            mode, 
            pairwise_distance_function,
            params, 
            variant,           # "experts" or "top2"
-           voting_rule):
+           voting_rule,
+           gt = None):
     n, m = data.shape
     if mode == "rankings":
         possible_answers = 2
